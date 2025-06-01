@@ -438,7 +438,7 @@ function showResults() {
 
     if (percentage >= passingScore) {
         resultScreen.innerHTML = `
-            <img src="/Users/robertomicarelli/Desktop/CORSO-AI-ROBY/Test Esame/Quiz_Completato_Con_Successo.jpg" alt="Quiz Completato" style="max-width: 100%; margin-bottom: 20px;">
+            <img src="Quiz_Completato_Con_Successo.jpg" alt="Quiz Completato" style="max-width: 100%; margin-bottom: 20px;">
             <h2>Congratulazioni!</h2>
             <p>Hai completato il quiz con successo!</p>
             <p>Punteggio: ${score}/${totalQuestions} (${percentage.toFixed(1)}%)</p>
