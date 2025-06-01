@@ -1,0 +1,253 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.logo-quiz-header {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.instructions {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #d93025;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#quiz-screen {
+    text-align: left;
+}
+
+.quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#question-counter {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.answer-options button {
+    display: block;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.answer-options button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.answer-options button.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.answer-options button.correct {
+    background-color: #28a745; /* Verde per corretto */
+    color: white;
+    border-color: #28a745;
+}
+
+.answer-options button.incorrect {
+    background-color: #dc3545; /* Rosso per incorretto */
+    color: white;
+    border-color: #dc3545;
+}
+
+
+#result-screen h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align:center;
+}
+#result-screen p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.result-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.success-icon {
+    color: #28a745; /* Verde */
+}
+
+.failure-icon {
+    color: #dc3545; /* Rosso */
+}
+
+#result-screen .success {
+    background-color: #28a745; /* Blu come da screenshot, ma verde è più standard per successo */
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+/* Se vuoi il blu come nello screenshot di successo: */
+ #result-screen .success.custom-blue-bg {
+    background-color: #007bff; /* Un blu simile */
+    /* Potresti dover aggiustare il colore per farlo corrispondere esattamente */
+}
+
+
+#result-screen .success h2 {
+    color: white;
+    margin-top:0;
+}
+#result-screen .success p {
+    color: white;
+}
+
+#result-screen .email-instruction {
+    font-weight: bold;
+    margin-top:20px;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 6px;
+}
+
+#result-screen .failure {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 30px;
+    border: 1px solid #f5c6cb;
+    border-radius: 12px;
+    text-align:center;
+}
+#result-screen .failure h2 {
+    color: #721c24;
+}
+#result-screen .failure p {
+    color: #721c24;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .answer-options button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

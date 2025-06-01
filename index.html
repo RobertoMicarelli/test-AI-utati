@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz AI-utati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <img src="Logo_Aiutati_Tondo.jpg" alt="Logo AI-utati" class="logo">
+            <h1>Quiz Corso AI-utati</h1>
+            <p class="instructions">
+                Benvenuto/a al quiz di valutazione del corso AI-utati.<br>
+                Per superare il test è necessario rispondere correttamente ad almeno l'80% delle domande (8 su 10).<br>
+                Le domande verranno presentate in ordine casuale.
+            </p>
+            <div class="input-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" placeholder="Il tuo nome">
+            </div>
+            <div class="input-group">
+                <label for="surname">Cognome:</label>
+                <input type="text" id="surname" placeholder="Il tuo cognome">
+            </div>
+            <button id="start-btn">Inizia il Quiz</button>
+            <p id="validation-message" class="error-message"></p>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <div class="quiz-header">
+                <img src="Logo_Aiutati_Tondo.jpg" alt="Logo AI-utati" class="logo-quiz-header">
+                <span id="question-counter"></span>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="answer-options" class="answer-options">
+                </div>
+            <button id="next-btn">Prossima Domanda</button>
+            <p id="selection-error" class="error-message" style="display:none;">Per favore, seleziona una risposta.</p>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
